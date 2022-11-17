@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Navbar from "./components/Navbar";
+import "./App.css";
+import HomeScreen from "./screens/HomeScreen";
+import DetailsScreen from "./screens/DetailsScreen";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import WatchScreen from "./screens/WatchScreen";
+import SearchScreen from "./screens/SearchScreen";
+import LoginScreen from "./screens/LoginScreen";
+import SignupScreen from "./screens/SignupScreen";
+
+class App extends React.Component {
+  render(): React.ReactNode {
+    return (
+      <BrowserRouter>
+        <Navbar />
+        
+          
+          <Routes>
+            <Route path="/" element={<HomeScreen />} />
+            <Route path="/details/:id" element={<DetailsScreen />} />
+            <Route path="/watch/:name/:episode" element={<WatchScreen />} />
+            <Route path="/search" element={<SearchScreen />} />
+            <Route path="/login" element={<LoginScreen />} />
+            <Route path="/signup" element={<SignupScreen />} />
+          </Routes>
+       
+      </BrowserRouter>
+    );
+  }
 }
 
 export default App;
