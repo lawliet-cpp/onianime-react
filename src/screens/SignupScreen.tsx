@@ -3,7 +3,7 @@ import {  Button, Input } from 'rsuite';
 export default function SignupScreen() {
   return (
     <div className="home" style={{width:"30%",marginTop:"100px",backgroundColor:"#22212c",padding:"80px",borderRadius:"20px"}}>
-      <h2 style={{marginTop:"30px",marginBottom:"40px"}}>Create Account </h2>
+      <h2 style={{marginTop:"30px",marginBottom:"40px"}}>Signup </h2>
       <form>
         <div style={{marginBottom:"30px",textAlign:"left"}}>
           

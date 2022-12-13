@@ -36,16 +36,8 @@ const App = (props: any) => {
               <a style={{ color: "white" }}>Home</a>
             </Link>
           </li>
-          <li>
-            <Link to="/login">
-              <a style={{ color: "white" }}>Login</a>
-            </Link>
-          </li>
-          <li>
-            <Link to="/signup">
-              <a style={{ color: "white" }}>Signup</a>
-            </Link>
-          </li>
+          
+          
         </ul>
       </nav>
     </div>

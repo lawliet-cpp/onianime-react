@@ -47,10 +47,11 @@ export default function WatchScreen() {
   return (
     <div >
       <div className=""  style={{ textAlign:"center" }}>
+      
       <SelectPicker data={data} onChange={(value:any,event)=>navigate(`/watch/${params.name}/${value}`)} style={{ width: 224,padding:10,marginTop:20,marginBottom:20,marginRight:'auto',marginLeft:"auto"}} />
       <SelectPicker data={downloadData} onChange={(value:any,event)=> window.open(value, '_blank', 'noopener,noreferrer')}style={{ width: 224,padding:10,marginTop:20,marginBottom:20,marginRight:'auto',marginLeft:"auto"}} />
 
-
+        <h3 style={{color:"white", marginBottom:"10px"}}>{params.name?.replaceAll('-',' ')} Episode {params.episode}</h3>
       </div>
 
 
